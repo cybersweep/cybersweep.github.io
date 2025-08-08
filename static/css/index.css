@@ -1,3 +1,11 @@
+@font-face {
+  font-family: "Calisto MT";
+  src: url("../fonts/CalistoMT.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;   /* 避免文字闪白 */
+}
+
 body {
   font-family: 'Noto Sans', sans-serif;
 }
@@ -164,7 +172,7 @@ body {
 
 /* 文字特效 */
 .hero.is-fullheight-bgblur .title {
-  font-family: 'Playfair Display', serif;   /* 新增这一行 */
+  font-family: "Calisto MT", serif;
   font-size: clamp(3rem, 8vw, 10rem);   /* 屏幕越大字越大，上限 10rem */
   font-weight: 900;
   color: #ffffff;
