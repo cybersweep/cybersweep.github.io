@@ -150,31 +150,64 @@ body {
   min-height: 100vh;
 }
 
-/* 背景图层 */
+/* 背景图层 
 .hero.is-fullheight-bgblur::before {
   content: "";
   position: absolute;
   inset: 0;
   background: url("../images/1080p.webp") center/cover no-repeat;
-  /* filter: blur(4px); */
   transform: scale(1.1);
   z-index: -2;
 }
 
-/* 额外渐变遮罩，可按需要删掉或调整透明度 */
 .hero.is-fullheight-bgblur::after {
   content: "";
   position: absolute;
   inset: 0;
   background: linear-gradient(
                to bottom,
-               rgba(0,0,0,0.65)   0%,   /* 顶部最暗 */
+               rgba(0,0,0,0.65)   0%,   
                rgba(0,0,0,0.45)  30%,
                rgba(0,0,0,0.00)  60%,
-               rgba(0,0,0,0.00) 100%   /* 底部全清晰 */
+               rgba(0,0,0,0.00) 100%   
              );
   z-index: -1;
 }
+*/
+
+/*--------------------------  清晰层：整幅原图  --------------------------*/
+.hero.is-fullheight-bgblur::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:url("../images/1080p.webp") center/cover no-repeat;
+  z-index:-2;            /* 最底层 */
+}
+
+/*--------------------------  模糊层：只遮上半部  --------------------------*/
+.hero.is-fullheight-bgblur::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:url("../images/1080p.webp") center/cover no-repeat;
+  filter:blur(4px);      /* 仅做模糊 */
+  transform:scale(1.1);  /* 避免 blur 收缩边缘 */
+  z-index:-1;            /* 盖住清晰层 */
+
+  /* 关键：用 mask-image 把 60% 以下裁掉 → 完全透明 */
+  mask-image: linear-gradient(to bottom,
+               rgba(0,0,0,1)  0%,
+               rgba(0,0,0,1) 60%,
+               rgba(0,0,0,0) 60%,
+               rgba(0,0,0,0)100%);
+  -webkit-mask-image: linear-gradient(to bottom,   /* Safari 前缀 */
+               rgba(0,0,0,1)  0%,
+               rgba(0,0,0,1) 60%,
+               rgba(0,0,0,0) 60%,
+               rgba(0,0,0,0)100%);
+}
+
+
 
 /* 文字特效 */
 .hero.is-fullheight-bgblur .title {
