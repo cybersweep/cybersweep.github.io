@@ -187,6 +187,6 @@ body {
   font-size: clamp(3rem, 5vw, 100rem);   /* 屏幕越大字越大，上限 10rem */
   font-weight: 100;
   color: #ffffffcc;           /* 微透明白 */
-  max-width: 70rem;
+  max-width: 80rem;
   margin: 1rem auto;
 }
