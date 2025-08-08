@@ -245,3 +245,6 @@ body {
 .hero-btns{
   margin-top:15rem;   /* 任意值，正数往下、负数往上 */
 }
+.button.thick-border{
+  border-width: 3px;          /* 想更粗就写 3px、4px… */
+}
