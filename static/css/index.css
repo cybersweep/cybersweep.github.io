@@ -150,7 +150,7 @@ body {
   min-height: 100vh;
 }
 
-/* 背景图层 
+/* 背景图层  */
 .hero.is-fullheight-bgblur::before {
   content: "";
   position: absolute;
@@ -173,34 +173,34 @@ body {
              );
   z-index: -1;
 }
-*/
 
-/*--------------------------  清晰层：整幅原图  --------------------------*/
-.hero.is-fullheight-bgblur::after{
+
+
+/* .hero.is-fullheight-bgblur::after{
   content:"";
   position:absolute;
   inset:0;
   background:url("../images/1080p.webp") center/cover no-repeat;
-  z-index:-2;            /* 最底层 */
+  z-index:-2;            
 }
 
-/*--------------------------  模糊层：只遮上半部  --------------------------*/
+
 .hero.is-fullheight-bgblur::before{
   content:"";
   position:absolute;
   inset:0;
   background:url("../images/1080p.webp") center/cover no-repeat;
-  filter:blur(4px);      /* 仅做模糊 */
-  z-index:-1;            /* 盖住清晰层 */
+  filter:blur(4px);      
+  z-index:-1;            
 
-  /* 关键：用 mask-image 把 60% 以下裁掉 → 完全透明 */
+
   mask-image: linear-gradient(to bottom,
-             rgba(0,0,0,1)   0%,   /* 顶部：blur 100 % */
-             rgba(0,0,0,0)  60%);  /* 60 %：blur 0 % */
+             rgba(0,0,0,1)   0%,   
+             rgba(0,0,0,0)  60%);  
 -webkit-mask-image: linear-gradient(to bottom,
              rgba(0,0,0,1)   0%,
              rgba(0,0,0,0)  60%);
-}
+} */
 
 
 
