@@ -173,7 +173,7 @@ body {
 /* 文字特效 */
 .hero.is-fullheight-bgblur .title {
   font-family: "Calisto MT", serif;
-  font-size: clamp(3rem, 20vw, 100rem);   /* 屏幕越大字越大，上限 10rem */
+  font-size: clamp(3rem, 15vw, 100rem);   /* 屏幕越大字越大，上限 10rem */
   font-weight: 400;
   color: #ffffff;
   text-shadow:
