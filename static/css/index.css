@@ -164,8 +164,9 @@ body {
 
 /* 文字特效 */
 .hero.is-fullheight-bgblur .title {
+  font-family: 'Playfair Display', serif;   /* 新增这一行 */
   font-size: clamp(3rem, 8vw, 10rem);   /* 屏幕越大字越大，上限 10rem */
-  font-weight: 800;
+  font-weight: 900;
   color: #ffffff;
   text-shadow:
     0 0 10px rgba(255,255,255,.9),
