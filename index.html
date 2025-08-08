@@ -23,11 +23,52 @@
   <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
+  <link rel="preload"
+  href="static/images/1080p.webp"
+  as="image"
+  type="image/webp"
+  fetchpriority="high">
+<!-- ① 内联首屏关键样式 -->
+<style id="critical-hero-css">
+  html,body{margin:0;}
+  .hero{display:flex;align-items:center;justify-content:center;min-height:100vh;text-align:center;overflow:hidden;}
+  .hero .title{
+    font:800 clamp(3rem,8vw,9rem)/1.1 'Noto Sans',sans-serif;
+    color:#fff;
+    text-shadow:0 0 10px #fff,0 0 30px #fff,0 0 80px #fff;
+    margin:0;
+  }
+  .hero .subtitle{
+    font:400 1.25rem/1.4 'Noto Sans',sans-serif;
+    color:#ffffffd0;
+    margin:1rem 0 2rem;
+    max-width:48rem;
+  }
+  .button{
+    display:inline-flex;align-items:center;gap:.4rem;
+    font:600 1rem/1 'Noto Sans',sans-serif;
+    border:2px solid #fff;border-radius:6px;padding:.75rem 1.3rem;
+    color:#fff;background:transparent;cursor:pointer;transition:.25s;
+  }
+  .button.is-primary{background:#00c8b4;border-color:#00c8b4}
+  .button:hover{filter:brightness(1.1)}
+</style>
+
+<!-- Playfair Display 字体：含 700 与 900 两种粗度 -->
+<!-- <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&display=swap"
+      rel="stylesheet"> -->
+<!-- 预连接 -->
+<!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
+
+<!-- 预加载所需字体（URL 直接抄 DevTools 里第一条字体请求即可） -->
+<!-- <link rel="preload"
+      href="https://fonts.gstatic.com/s/notosans/v27/o-0IIpQlx3QUlC5A4PNr5TRA.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin> -->
+
 
   <title>Academic Project Page</title>
-  <link rel="preload" as="image"
-      href="static/images/1080p.webp"
-      type="image/webp">
   <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
   rel="stylesheet">
