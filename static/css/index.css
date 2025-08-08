@@ -191,7 +191,6 @@ body {
   inset:0;
   background:url("../images/1080p.webp") center/cover no-repeat;
   filter:blur(4px);      /* 仅做模糊 */
-  transform:scale(1.1);  /* 避免 blur 收缩边缘 */
   z-index:-1;            /* 盖住清晰层 */
 
   /* 关键：用 mask-image 把 60% 以下裁掉 → 完全透明 */
