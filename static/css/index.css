@@ -5,6 +5,13 @@
   font-style: normal;
   font-display: swap;   /* 避免文字闪白 */
 }
+@font-face {
+  font-family: "AgencyFB-Reg";
+  src: url("../fonts/AgencyFB-Reg.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;   /* 避免文字闪白 */
+}
 
 body {
   font-family: 'Noto Sans', sans-serif;
@@ -229,7 +236,7 @@ body {
    仅控制按钮文字，不影响图标、背景
 ===================================== */
 .btn-label{
-  font-family: "Calisto MT", serif; /* 或 'Playfair Display', etc. */
+  font-family: "AgencyFB-Reg", serif; /* 或 'Playfair Display', etc. */
   font-weight: 200;                 /* 粗体 */
   font-size: 1.05rem;               /* 调节大小 */
   letter-spacing: 0.04em;           /* 可选：略微加宽间距 */
