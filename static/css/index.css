@@ -238,7 +238,7 @@ body {
 .btn-label{
   font-family: "AgencyFB-Reg", serif; /* 或 'Playfair Display', etc. */
   font-weight: 500;                 /* 粗体 */
-  font-size: 1.7rem;               /* 调节大小 */
+  font-size: 5rem;               /* 调节大小 */
   letter-spacing: 0.04em;           /* 可选：略微加宽间距 */
 }
 .hero-btns{
