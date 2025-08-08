@@ -240,7 +240,6 @@ body {
   font-weight: 500;                 /* 粗体 */
   font-size: 1.7rem;               /* 调节大小 */
   letter-spacing: 0.04em;           /* 可选：略微加宽间距 */
-  line-height: 1;                   /* 与图标垂直对齐 */
 }
 .hero-btns{
   margin-top:15rem;   /* 任意值，正数往下、负数往上 */
