@@ -238,7 +238,7 @@ body {
 .btn-label{
   font-family: "AgencyFB-Reg", serif; /* 或 'Playfair Display', etc. */
   font-weight: 300;                 /* 粗体 */
-  font-size: 1.35rem;               /* 调节大小 */
+  font-size: 1.5rem;               /* 调节大小 */
   letter-spacing: 0.04em;           /* 可选：略微加宽间距 */
   line-height: 1;                   /* 与图标垂直对齐 */
 }
@@ -246,5 +246,5 @@ body {
   margin-top:15rem;   /* 任意值，正数往下、负数往上 */
 }
 .button.thick-border{
-  border-width: 3px;          /* 想更粗就写 3px、4px… */
+  border-width: 2px;          /* 想更粗就写 3px、4px… */
 }
