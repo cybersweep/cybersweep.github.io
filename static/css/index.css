@@ -184,7 +184,7 @@ body {
 
 .hero.is-fullheight-bgblur .subtitle {
   font-family: "Calisto MT", serif;
-  font-size: clamp(3rem, 15vw, 100rem);   /* 屏幕越大字越大，上限 10rem */
+  font-size: clamp(3rem, 5vw, 100rem);   /* 屏幕越大字越大，上限 10rem */
   font-weight: 100;
   color: #ffffffcc;           /* 微透明白 */
   max-width: 48rem;
