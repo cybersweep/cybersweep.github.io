@@ -323,3 +323,10 @@ body {
   font-family: 'SitkaText', serif;       /* 例：副标题用 Calisto */
   font-weight: 400;
 }
+
+.sc{
+  font-variant-caps: small-caps; /* 常用：小写→小型大写，原本大写保持大写 */
+  /* 如果想“所有字母都用小型大写”，用下面这行： */
+  /* font-variant-caps: all-small-caps; */
+  letter-spacing: .02em;        /* 可选：略加字距更好看 */
+}
