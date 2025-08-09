@@ -12,6 +12,13 @@
   font-style: normal;
   font-display: swap;   /* 避免文字闪白 */
 }
+@font-face {
+  font-family: "SitkaText";
+  src: url("../fonts/SitkaText.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;   /* 避免文字闪白 */
+}
 
 body {
   font-family: 'Noto Sans', sans-serif;
@@ -304,4 +311,14 @@ body {
   letter-spacing: .06em;
   color:#61708a;
   padding: .6rem .9rem;
+}
+/* 只影响每个栏目头部里的标题和副标题 */
+.stripe-header .title{
+  font-family: 'SitkaText', serif; /* 例：大标题用 Playfair */
+  font-weight: 700;
+}
+
+.stripe-header .subtitle{
+  font-family: 'SitkaText', serif;       /* 例：副标题用 Calisto */
+  font-weight: 400;
 }
