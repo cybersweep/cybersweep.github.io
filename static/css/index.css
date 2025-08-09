@@ -346,6 +346,6 @@ body {
 }
 .stripe-header .feature-list li{
   line-height: 1.7;
-  margin-bottom: .15rem;      /* 项目之间留一点空 */
+  margin-bottom: .05rem;      /* 项目之间留一点空 */
   hyphens: auto;              /* 列表项同样可断词 */
 }
