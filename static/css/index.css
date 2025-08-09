@@ -247,3 +247,61 @@ body {
 .button.thick-border{
   border-width: 2px;          /* 想更粗就写 3px、4px… */
 }
+
+
+/* 每个栏目条 */
+.stripe{
+  padding: 5rem 1.5rem;        /* 上下留白，左右保持与 Bulma 一致 */
+  background: #fff;            /* 白色背景 */
+}
+.stripe.is-alt{                 /* 灰色背景的交替条 */
+  background: #f7f8fa;
+}
+
+/* 也可以自动交替（不想手动加 is-alt 时开启） */
+/* .stripe:nth-of-type(even){ background:#f7f8fa; } */
+
+.stripe-header{
+  margin-bottom: 2rem;
+}
+.stripe-header .title{
+  margin-bottom: .5rem;
+}
+.stripe-header .subtitle{
+  margin: 0;
+  max-width: 60ch;             /* 控制行长更好读 */
+}
+
+/* 媒体卡片：圆角+轻阴影 */
+.media-card{
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0,0,0,.08);
+  background: #fff;
+}
+.media-card img,
+.media-card video{
+  display:block;
+  width: 100%;
+  height: auto;
+}
+
+/* 16:9 自适应视频容器（不抖动） */
+.video-16by9{
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;        /* 现代浏览器 */
+  background: #000;
+}
+.video-16by9 > video{
+  position:absolute; inset:0;
+  width:100%; height:100%;
+  object-fit:cover;
+}
+
+.caption{
+  font-size: .85rem;
+  letter-spacing: .06em;
+  color:#61708a;
+  padding: .6rem .9rem;
+}
