@@ -330,3 +330,9 @@ body {
   /* font-variant-caps: all-small-caps; */
   letter-spacing: .02em;        /* 可选：略加字距更好看 */
 }
+
+.justify{
+  text-align: justify;
+  text-justify: inter-word; /* 让单词间距参与对齐（主要给旧版 Edge/IE） */
+  hyphens: auto;            /* 英文自动断词，效果更平滑 */
+}
