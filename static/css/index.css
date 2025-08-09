@@ -336,3 +336,14 @@ body {
   text-justify: inter-word; /* 让单词间距参与对齐（主要给旧版 Edge/IE） */
   hyphens: auto;            /* 英文自动断词，效果更平滑 */
 }
+
+/* 列表的样式细节（缩进/行高/间距） */
+.stripe-header .feature-list{
+  margin: .5rem 0 0 1.25rem;  /* 与“ It features:” 的间距与缩进 */
+  list-style: disc;           /* 默认圆点 */
+}
+.stripe-header .feature-list li{
+  line-height: 1.7;
+  margin-bottom: .35rem;      /* 项目之间留一点空 */
+  hyphens: auto;              /* 列表项同样可断词 */
+}
