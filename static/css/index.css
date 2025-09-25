@@ -221,22 +221,27 @@ body {
 /* 文字特效 */
 .hero.is-fullheight-bgblur .title {
   font-family: "Calisto MT", serif;
-  font-size: clamp(3rem, 15vw, 100rem);   /* 屏幕越大字越大，上限 10rem */
+  font-size: 6rem;   /* 固定字体大小，确保一致性 */
   font-weight: 400;
   color: #ffffff;
   text-shadow:
     0 0 10px rgba(255,255,255,.9),
     0 0 30px rgba(255,255,255,.8),
     0 0 80px rgba(255,255,255,.6);
+  line-height: 1.1;
+  margin: 0;
 }
 
 .hero.is-fullheight-bgblur .subtitle {
   font-family: "Calisto MT", serif;
-  font-size: clamp(3rem, 2vw, 100rem);   /* 屏幕越大字越大，上限 10rem */
+  font-size: 1.5rem;   /* 固定字体大小 */
   font-weight: 100;
   color: #ffffffcc;           /* 微透明白 */
-  max-width: 80rem;
+  max-width: 60rem;   /* 减少最大宽度，确保换行一致 */
   margin: 1rem auto;
+  line-height: 1.4;
+  text-align: center;
+  padding: 0 2rem;   /* 添加左右内边距 */
 }
 
 /* =====================================
@@ -405,6 +410,39 @@ body {
   line-height:1.4;
   color:#6b7280;                /* 需要更深可换 #4b5563 */
   text-align:center;
+}
+
+/* 响应式设计 - Hero部分 */
+@media (max-width: 1200px) {
+  .hero.is-fullheight-bgblur .title {
+    font-size: 5rem;
+  }
+  .hero.is-fullheight-bgblur .subtitle {
+    font-size: 1.3rem;
+    max-width: 50rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero.is-fullheight-bgblur .title {
+    font-size: 4rem;
+  }
+  .hero.is-fullheight-bgblur .subtitle {
+    font-size: 1.1rem;
+    max-width: 40rem;
+    padding: 0 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero.is-fullheight-bgblur .title {
+    font-size: 3rem;
+  }
+  .hero.is-fullheight-bgblur .subtitle {
+    font-size: 1rem;
+    max-width: 35rem;
+    padding: 0 0.5rem;
+  }
 }
 
 /* 让轮播在灰色栏目里和其它内容间距舒服一些 */

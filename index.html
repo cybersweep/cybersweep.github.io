@@ -35,16 +35,24 @@
   html,body{margin:0;}
   .hero{display:flex;align-items:center;justify-content:center;min-height:100vh;text-align:center;overflow:hidden;}
   .hero .title{
-    font:800 clamp(3rem,8vw,9rem)/1.1 'Noto Sans',sans-serif;
+    font-family:"Calisto MT",serif;
+    font-size:6rem;
+    font-weight:400;
     color:#fff;
-    text-shadow:0 0 10px #fff,0 0 30px #fff,0 0 80px #fff;
+    text-shadow:0 0 10px rgba(255,255,255,.9),0 0 30px rgba(255,255,255,.8),0 0 80px rgba(255,255,255,.6);
+    line-height:1.1;
     margin:0;
   }
   .hero .subtitle{
-    font:400 1.25rem/1.4 'Noto Sans',sans-serif;
-    color:#ffffffd0;
-    margin:1rem 0 2rem;
-    max-width:48rem;
+    font-family:"Calisto MT",serif;
+    font-size:1.5rem;
+    font-weight:100;
+    color:#ffffffcc;
+    margin:1rem auto;
+    max-width:60rem;
+    line-height:1.4;
+    text-align:center;
+    padding:0 2rem;
   }
   .button{
     display:inline-flex;align-items:center;gap:.4rem;
@@ -54,6 +62,18 @@
   }
   .button.is-primary{background:#00c8b4;border-color:#00c8b4}
   .button:hover{filter:brightness(1.1)}
+  @media (max-width:1200px){
+    .hero .title{font-size:5rem;}
+    .hero .subtitle{font-size:1.3rem;max-width:50rem;}
+  }
+  @media (max-width:768px){
+    .hero .title{font-size:4rem;}
+    .hero .subtitle{font-size:1.1rem;max-width:40rem;padding:0 1rem;}
+  }
+  @media (max-width:480px){
+    .hero .title{font-size:3rem;}
+    .hero .subtitle{font-size:1rem;max-width:35rem;padding:0 .5rem;}
+  }
 </style>
 
 <!-- Playfair Display 字体：含 700 与 900 两种粗度 -->
