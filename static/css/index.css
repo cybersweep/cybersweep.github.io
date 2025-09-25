@@ -234,10 +234,10 @@ body {
 
 .hero.is-fullheight-bgblur .subtitle {
   font-family: "Calisto MT", serif;
-  font-size: 1.8rem;   /* 增大字体大小 */
+  font-size: 2.5rem;   /* 增大字体大小 */
   font-weight: 100;
   color: #ffffffcc;           /* 微透明白 */
-  max-width: 70rem;   /* 相应增加最大宽度 */
+  max-width: 80rem;   /* 相应增加最大宽度 */
   margin: 1rem auto;
   line-height: 1.4;
   text-align: center;
@@ -418,8 +418,8 @@ body {
     font-size: 9.0rem;
   }
   .hero.is-fullheight-bgblur .subtitle {
-    font-size: 1.6rem;
-    max-width: 60rem;
+    font-size: 1.8rem;
+    max-width: 70rem;
   }
 }
 
@@ -428,8 +428,8 @@ body {
     font-size: 7rem;
   }
   .hero.is-fullheight-bgblur .subtitle {
-    font-size: 1.4rem;
-    max-width: 50rem;
+    font-size: 1.6rem;
+    max-width: 60rem;
     padding: 0 1rem;
   }
 }
@@ -439,8 +439,8 @@ body {
     font-size: 6rem;
   }
   .hero.is-fullheight-bgblur .subtitle {
-    font-size: 1.2rem;
-    max-width: 40rem;
+    font-size: 1.4rem;
+    max-width: 50rem;
     padding: 0 0.5rem;
   }
 }
