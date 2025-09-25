@@ -221,7 +221,7 @@ body {
 /* 文字特效 */
 .hero.is-fullheight-bgblur .title {
   font-family: "Calisto MT", serif;
-  font-size: 8rem;   /* 增大字体大小 */
+  font-size: 12rem;   /* 增大字体大小 */
   font-weight: 400;
   color: #ffffff;
   text-shadow:
@@ -415,7 +415,7 @@ body {
 /* 响应式设计 - Hero部分 */
 @media (max-width: 1200px) {
   .hero.is-fullheight-bgblur .title {
-    font-size: 6.5rem;
+    font-size: 9.0rem;
   }
   .hero.is-fullheight-bgblur .subtitle {
     font-size: 1.6rem;
@@ -425,7 +425,7 @@ body {
 
 @media (max-width: 768px) {
   .hero.is-fullheight-bgblur .title {
-    font-size: 5rem;
+    font-size: 7rem;
   }
   .hero.is-fullheight-bgblur .subtitle {
     font-size: 1.4rem;
@@ -436,7 +436,7 @@ body {
 
 @media (max-width: 480px) {
   .hero.is-fullheight-bgblur .title {
-    font-size: 4rem;
+    font-size: 6rem;
   }
   .hero.is-fullheight-bgblur .subtitle {
     font-size: 1.2rem;
