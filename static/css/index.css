@@ -221,7 +221,8 @@ body {
 /* 文字特效 */
 .hero.is-fullheight-bgblur .title {
   font-family: "Calisto MT", serif;
-  font-size: 12rem;   /* 增大字体大小 */
+  /*font-size: 12rem;   /* 增大字体大小 */
+  font-size: clamp(4rem, 12vw, 12rem);   /* 使用clamp实现响应式缩放 */
   font-weight: 400;
   color: #ffffff;
   text-shadow:
@@ -234,10 +235,12 @@ body {
 
 .hero.is-fullheight-bgblur .subtitle {
   font-family: "Calisto MT", serif;
-  font-size: 3.0rem;   /* 增大字体大小 */
+  /*font-size: 3.0rem;   /* 增大字体大小 */
+  font-size: clamp(1.2rem, 3vw, 3rem);   /* 使用clamp实现响应式缩放 */
   font-weight: 100;
   color: #ffffffcc;           /* 微透明白 */
-  max-width: 90rem;   /* 相应增加最大宽度 */
+  /*max-width: 90rem;   /* 相应增加最大宽度 */
+  max-width: clamp(40rem, 90vw, 90rem);   /* 响应式最大宽度 */
   margin: 1rem auto;
   line-height: 1.4;
   text-align: center;
@@ -415,32 +418,41 @@ body {
 /* 响应式设计 - Hero部分 */
 @media (max-width: 1200px) {
   .hero.is-fullheight-bgblur .title {
-    font-size: 9.0rem;
+    /*font-size: 9.0rem; */
+    font-size: clamp(3.5rem, 9vw, 9rem);
   }
   .hero.is-fullheight-bgblur .subtitle {
-    font-size: 2.0rem;
-    max-width: 80rem;
+    /*font-size: 2.0rem;
+    max-width: 80rem; */
+    font-size: clamp(1.1rem, 2vw, 2rem);
+    max-width: clamp(35rem, 80vw, 80rem);
   }
 }
 
 @media (max-width: 768px) {
   .hero.is-fullheight-bgblur .title {
-    font-size: 7rem;
+    /* font-size: 7rem; */
+    font-size: clamp(3rem, 7vw, 7rem);
   }
   .hero.is-fullheight-bgblur .subtitle {
-    font-size: 1.8rem;
-    max-width: 70rem;
+    /* font-size: 1.8rem;
+    max-width: 70rem; */
+    font-size: clamp(1rem, 1.8vw, 1.8rem);
+    max-width: clamp(30rem, 70vw, 70rem);
     padding: 0 1rem;
   }
 }
 
 @media (max-width: 480px) {
   .hero.is-fullheight-bgblur .title {
-    font-size: 6rem;
+    /* font-size: 6rem; */
+    font-size: clamp(2.5rem, 6vw, 6rem);
   }
   .hero.is-fullheight-bgblur .subtitle {
-    font-size: 1.6rem;
-    max-width: 60rem;
+    /* font-size: 1.6rem;
+    max-width: 60rem; */
+    font-size: clamp(0.9rem, 1.6vw, 1.6rem);
+    max-width: clamp(25rem, 60vw, 60rem);
     padding: 0 0.5rem;
   }
 }

@@ -36,7 +36,8 @@
   .hero{display:flex;align-items:center;justify-content:center;min-height:100vh;text-align:center;overflow:hidden;}
   .hero .title{
     font-family:"Calisto MT",serif;
-    font-size:12rem;
+    /*font-size:12rem;*/
+    font-size:clamp(4rem, 12vw, 12rem);
     font-weight:400;
     color:#fff;
     text-shadow:0 0 10px rgba(255,255,255,.9),0 0 30px rgba(255,255,255,.8),0 0 80px rgba(255,255,255,.6);
@@ -45,11 +46,13 @@
   }
   .hero .subtitle{
     font-family:"Calisto MT",serif;
-    font-size:3.0rem;
+    /*font-size:3.0rem;*/
+    font-size:clamp(1.2rem, 3vw, 3rem);
     font-weight:100;
     color:#ffffffcc;
     margin:1rem auto;
-    max-width:90rem;
+    /*max-width:90rem;*/
+    max-width:clamp(40rem, 90vw, 90rem);
     line-height:1.4;
     text-align:center;
     padding:0 2rem;
@@ -63,16 +66,22 @@
   .button.is-primary{background:#00c8b4;border-color:#00c8b4}
   .button:hover{filter:brightness(1.1)}
   @media (max-width:1200px){
-    .hero .title{font-size:9.0rem;}
-    .hero .subtitle{font-size:2.0rem;max-width:80rem;}
+    /*.hero .title{font-size:9.0rem;}
+    .hero .subtitle{font-size:2.0rem;max-width:80rem;} */
+    .hero .title{font-size:clamp(3.5rem, 9vw, 9rem);}
+    .hero .subtitle{font-size:clamp(1.1rem, 2vw, 2rem);max-width:clamp(35rem, 80vw, 80rem);}
   }
   @media (max-width:768px){
-    .hero .title{font-size:7rem;}
-    .hero .subtitle{font-size:1.8rem;max-width:70rem;padding:0 1rem;}
+    /*.hero .title{font-size:7rem;}
+    .hero .subtitle{font-size:1.8rem;max-width:70rem;padding:0 1rem;} */
+    .hero .title{font-size:clamp(3rem, 7vw, 7rem);}
+    .hero .subtitle{font-size:clamp(1rem, 1.8vw, 1.8rem);max-width:clamp(30rem, 70vw, 70rem);padding:0 1rem;}
   }
   @media (max-width:480px){
-    .hero .title{font-size:6rem;}
-    .hero .subtitle{font-size:1.6rem;max-width:60rem;padding:0 .5rem;}
+    /*.hero .title{font-size:6rem;}
+    .hero .subtitle{font-size:1.6rem;max-width:60rem;padding:0 .5rem;}*/
+    .hero .title{font-size:clamp(2.5rem, 6vw, 6rem);}
+    .hero .subtitle{font-size:clamp(0.9rem, 1.6vw, 1.6rem);max-width:clamp(25rem, 60vw, 60rem);padding:0 .5rem;}
   }
 </style>
 
