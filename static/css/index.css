@@ -222,8 +222,7 @@ body {
 .hero.is-fullheight-bgblur .title {
   font-family: "Calisto MT", serif;
   /*font-size: 12rem;   /* 增大字体大小 */
-  /* font-size: clamp(4rem, 12vw, 12rem);   使用clamp实现响应式缩放 */
-  font-size: 12vw;
+  font-size: clamp(4rem, 12vw, 12rem);   
   font-weight: 400;
   color: #ffffff;
   text-shadow:
