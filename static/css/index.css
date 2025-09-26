@@ -386,6 +386,8 @@ body {
 .media-auto-nofull { background: inherit; } /* 或你的灰色 */
 .media-auto-nofull img { width:70%; height:auto; display:block; margin: 0 auto;}
 
+.media-auto-nofull-90 { background: inherit; } /* 或你的灰色 */
+.media-auto-nofull-90 img { width:90%; height:auto; display:block; margin: 0 auto;}
 
 .media-row{
   display:grid; grid-template-columns:1fr; gap:1rem; margin-top:1rem;
