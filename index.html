@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="DESCRIPTION META TAG">
+
+  <meta name="robots" content="noindex, nofollow">
+  <meta property="og:title" content="SOCIAL MEDIA TITLE TAG"/>
+  <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG"/>
+  <meta property="og:url" content="URL OF THE WEBSITE"/>
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="og:image" content="static/image/your_banner_image.png" />
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+
+
+  <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
+  <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="preload"
+  href="static/images/1080p.webp"
+  as="image"
+  type="image/webp"
+  fetchpriority="high">
+
+<style id="critical-hero-css">
+  html,body{margin:0;}
+  .hero{display:flex;align-items:center;justify-content:center;min-height:100vh;text-align:center;overflow:hidden;}
+  .hero .title{
+    font-family:"Calisto MT",serif;
+    /*font-size:12rem;*/
+    font-size:clamp(4rem, 12vw, 12rem);
+    /* font-size: 12vw; */
+    font-weight:400;
+    color:#fff;
+    text-shadow:0 0 10px rgba(255,255,255,.9),0 0 30px rgba(255,255,255,.8),0 0 80px rgba(255,255,255,.6);
+    line-height:1.1;
+    margin:0;
+  }
+  .hero .subtitle{
+    font-family:"Calisto MT",serif;
+    /*font-size:3.0rem;*/
+    /* font-size:clamp(1.2rem, 3vw, 3rem); */
+    font-size: 3vw;
+    font-weight:100;
+    color:#ffffffcc;
+    margin:1rem auto;
+    /*max-width:90rem;*/
+    max-width:clamp(40rem, 90vw, 90rem);
+    line-height:1.4;
+    text-align:center;
+    padding:0 2rem;
+  }
+  .button{
+    display:inline-flex;align-items:center;gap:.4rem;
+    font:600 1rem/1 'Noto Sans',sans-serif;
+    border:2px solid #fff;border-radius:6px;padding:.75rem 1.3rem;
+    color:#fff;background:transparent;cursor:pointer;transition:.25s;
+  }
+  .button.is-primary{background:#00c8b4;border-color:#00c8b4}
+  .button:hover{filter:brightness(1.1)}
+  @media (max-width:1200px){
+    /*.hero .title{font-size:9.0rem;}
+    .hero .subtitle{font-size:2.0rem;max-width:80rem;} */
+    .hero .title{font-size:clamp(3.5rem, 9vw, 9rem);}
+    .hero .subtitle{font-size:clamp(1.1rem, 2vw, 2rem);max-width:clamp(35rem, 80vw, 80rem);}
+  }
+  @media (max-width:768px){
+    /*.hero .title{font-size:7rem;}
+    .hero .subtitle{font-size:1.8rem;max-width:70rem;padding:0 1rem;} */
+    .hero .title{font-size:clamp(3rem, 7vw, 7rem);}
+    .hero .subtitle{font-size:clamp(1rem, 1.8vw, 1.8rem);max-width:clamp(30rem, 70vw, 70rem);padding:0 1rem;}
+  }
+  @media (max-width:480px){
+    /*.hero .title{font-size:6rem;}
+    .hero .subtitle{font-size:1.6rem;max-width:60rem;padding:0 .5rem;}*/
+    .hero .title{font-size:clamp(2.5rem, 6vw, 6rem);}
+    .hero .subtitle{font-size:clamp(0.9rem, 1.6vw, 1.6rem);max-width:clamp(25rem, 60vw, 60rem);padding:0 .5rem;}
+  }
+</style>
+
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&display=swap"
+      rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+
+<!-- <link rel="preload"
+      href="https://fonts.gstatic.com/s/googlesans/v64/4Ua_rENHsxJlGDuGo1OIlJfC6l_24rlCK1Yo_Iqcsih3SAyH6cAwhX9RFD48TE63OOYKtrwEIJllpyk.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin> -->
+<link rel="preload"
+      href="static/fonts/CalistoMT.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin>
+
+
+
+<link rel="preload"
+      href="static/images/hf-logo.svg"
+      as="image"
+      type="image/svg+xml">
+<link rel="preload"
+      href="static/images/github.svg"
+      as="image"
+      type="image/svg+xml">
+
+
+  <title>CYBERSWEEP</title>
+  <link rel="icon" type="image/x-icon" href="static/images/sweep_ico.ico">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+</head>
+<body>
+
+
+<section class="hero is-fullheight-bgblur">
+  <div class="hero-body">
+    <div class="container has-text-centered">
+      <h1 class="title"><span class="sc">CyberSweep</span></h1>
+
+      <p class="subtitle">
+        <span class="sc">CyberSweep</span> pioneers an integrated, simulation-driven workflow that elevates sweeping robots from passive cleaners to intelligent, interactive household companions.
+      </p>
+
+      <div class="buttons is-right hero-btns">
+        <a class="button is-light is-outlined is-medium thick-border" href="https://github.com/cybersweep/cybersweep-code" target="_blank" rel="noopener noreferrer" onclick="this.blur();">
+          <span class="icon">
+            <img src="static/images/github.svg" alt="Github" style="height:1.5em;width:1.5em;">
+          </span>
+          <span class="btn-label">CODE</span>
+        </a>
+        <a class="button is-light is-outlined is-medium thick-border" href="https://huggingface.co/novaxa-research/CyberSweep" target="_blank" rel="noopener noreferrer" onclick="this.blur();">
+          <span class="icon">
+            <img src="static/images/hf-logo.svg" alt="Hugging Face" style="height:1.5em;width:1.5em;">
+          </span>
+          <span class="btn-label">STORAGE</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+<section class="stripe">
+  <div class="container is-max-fullhd">
+    <header class="stripe-header">
+      <h2 class="title is-2">Overview</h2>
+      <p class="subtitle is-4 justify">
+        Sweeping robot research faces challenges in <strong>data and research platform scarcity</strong>, <strong>upward-view domain shift</strong>, and <strong>unintegrated interaction paradigms</strong>. To address these, we introduced <span class="sc"><strong>CyberSweep</strong></span>, an novel end-to-end embodied interaction workflow for sweeping robots. It features:
+      </p>
+      <ul class="feature-list is-size-4">
+        <li class="justify"><strong>a simulation infrastructure</strong> for scalable scene synthesis and task annotation;</li>
+        <li class="justify"><strong>a diffusion-based view synthesis method</strong> to align upward-view observations with eye-level perspectives;</li>
+        <li class="justify"><strong>a unified vision-language-action decision model</strong> for seamless multimodal reasoning and human collaboration.</li>
+      </ul>
+    </header>
+
+    <div class="video-16by9">
+      <iframe
+        src="https://www.youtube-nocookie.com/embed/7ZBFF4686xk?rel=0&modestbranding=1&playsinline=1"
+        title="Demo"
+        loading="lazy"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen>
+      </iframe>
+    </div>
+  </div>
+</section>
+
+
+<section class="stripe is-alt">
+  <div class="container is-max-fullhd">
+    <header class="stripe-header">
+      <h2 class="title is-2">Cross-Source 3D Asset Acquisition</h2>
+      <p class="subtitle is-4">
+        We constructed a comprehensive 3D asset library through multiple approaches, including retrieval-based and generation-based methods, consisting of object categories particularly relevant to sweeping robots, such as <strong>trash cans, shoes, wires, socks, books, and pet feces</strong>. The number of assets in each category ranges from 100 to 600.
+      </p>
+    </header>
+    
+    
+<div class="video-16by9" data-video>
+  <button class="play" aria-label="Play video">▶</button>
+
+  
+  <img class="poster"
+       src="static/images/assets_rot.00_00_00_00.Still001.webp"
+       alt="asset rot"
+       fetchpriority="high" decoding="async">
+
+  
+  <video preload="metadata" playsinline controls hidden>
+    
+    <source data-src="static/images/assets_rot_webm.webm" type="video/webm">
+  </video>
+
+</div>
+  </div>
+</section>
+
+
+
+<section class="stripe">
+  <div class="container is-max-fullhd">
+    <header class="stripe-header">
+      <h2 class="title is-2">Autoregressive Scene Population</h2>
+      <p class="subtitle is-4 justify">
+        To simulate realistic indoor environments for sweeping robots, we propose an <strong>autoregressive placement strategy</strong> to populate previously acquired sweeping robot-relevant 3D assets into existing household scenes.
+      </p>
+      <ul class="feature-list is-size-4">
+        <li class="justify">We adopt an <strong>area-normalized counting strategy</strong> (e.g., a pair of socks per 100 m2);</li>
+        <li class="justify">The <strong>denoising network</strong> is used to generate the size, location, and orientation of a given asset;</li>
+        <li class="justify">Each category is associated with a <strong>probabilistic prompt distribution</strong> (e.g., trash can: 30% ‘beside desk’, 30% ‘in kitchen’, 20% ‘beside sofa’, 20% ‘center’).</li>
+      </ul>
+    </header>
+
+    <div class="video-16by9">
+      <img
+        class="poster"                     
+        src="static/images/population.webp"     
+        alt="Autoregressive Scene Population"
+        loading="lazy" decoding="async">
+    </div>
+  </div>
+</section>
+
+
+
+<section class="stripe is-alt">
+  <div class="container is-max-fullhd">
+    <header class="stripe-header">
+      <h2 class="title is-2">Structured Annotation</h2>
+      <p class="subtitle is-4">
+        We establish a <strong>three-stage annotation pipeline</strong> that builds a comprehensive understanding suite for downstream multimodal training and evaluation:
+      </p>
+      <ul class="feature-list is-size-4">
+        <li class="justify"><strong>Basic annotation</strong>, which provides foundational semantic priors such as room types and object-level descriptions from upwardview observations;</li>
+        <li class="justify"><strong>Task annotation</strong>, which formulates structured episodes for five embodied tasks;</li>
+        <li class="justify"><strong>Training annotation</strong>, which simulates ground-truth trajectories in the virtual environment to collect step-by-step multimodal supervision for training large vision-language-action models.</li>
+      </ul>
+    </header>
+    
+    <div class="media-auto">
+      <img src="static/images/annotation.webp"
+           alt="annotation"
+           loading="lazy" decoding="async">
+    </div>
+    <div class="media-row">
+      <figure class="media-tile">
+        <div class="frame">
+          <img src="static/images/figure_4_a.webp"  alt="Left"  loading="lazy" decoding="async">
+        </div>
+        <figcaption class="caption">(a) Distribution of 3D assets.</figcaption>
+      </figure>
+      <figure class="media-tile">
+        <div class="frame">
+          <img src="static/images/figure_4_b.webp"  alt="right"  loading="lazy" decoding="async">
+        </div>
+        <figcaption class="caption">(b) Data statistics for MP3D-S and HM3D-S.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="stripe">
+  <div class="container is-max-fullhd">
+    <header class="stripe-header">
+      <h2 class="title is-2">Eye-Level View Synthesis from Upward Observations</h2>
+      <p class="subtitle is-4 justify">
+        To bridge perspective domain gap, we propose a <strong>diffusion-based transformation that synthesizes eye-level views from upward observations</strong>, explicitly aligning robotic visual inputs with the human-centric data distributions exploited by pre-trained VLMs for effective model adaptation.
+      </p>
+      <ul class="feature-list is-size-4">
+        <li class="justify"><strong>Multi-view consistency</strong>: maintain consistency across these multi-view generations;</li>
+        <li class="justify"><strong>Text-guided denoising</strong>: guide the model towards generating appropriate directional views;</li>
+        <li class="justify"><strong>Upward observations as controlnet guidance</strong>: incorporate upward observations including RGB images, depth maps, and semantic segmentation maps to provide fine-grained visual context for eye-level view synthesis;</li>
+        <li class="justify"><strong>Pose-conditioned adaLN modulation</strong>: incorporate the relative rotation matrix and translation vector alongside the diffusion timestep.</li>
+      </ul>
+    </header>
+    <div class="columns is-variable is-5 is-vcentered mt-4">
+      
+      <div class="column is-7-desktop is-6-tablet is-12-mobile">
+        <figure class="image is-3by2">  
+          <img class="has-ratio" src="static/images/figure_6.webp" alt="Left">
+        </figure>
+      </div>
+    
+      
+      <div class="column is-5-desktop is-6-tablet is-12-mobile is-flex is-align-items-center">
+        <figure class="image is-16by9" style="width:100%;">
+          <img class="has-ratio" src="static/images/figure_13.webp" alt="Right">
+        </figure>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<section class="stripe is-alt">
+  <div class="container is-max-fullhd">
+    <header class="stripe-header">
+      <h2 class="title is-2">Unified Vision-Language-Action Model for Embodied Interaction</h2>
+      <p class="subtitle is-4">
+        We model the unified embodied interaction process as a <strong>perception-conditioned decision framework</strong>, where both the multimodal observations and language contexts evolve over time.
+      </p>
+      <ul class="feature-list is-size-4">
+        <li class="justify">Upward observations are used as input to a <strong>diffusion-based eye-level view synthesis module</strong> to generate a set of synthesized eye-level RGB images;</li>
+        <li class="justify">We design a optional <strong>Human Request Trigger module</strong> that detects when the robot is likely stuck and needs external assistance;</li>
+        <li class="justify">Optional, <strong>cumulative sequence of human request Q&A pairs</strong> are appended to the textual branch to provide the robot with collaborative information;</li>
+        <li class="justify"><strong>The LLM</strong> receives multimodal embeddings from the visual branch and the textual branch to plan the decision outputs: Response, Action, Request (optional), Stop.</li>
+      </ul>
+    </header>
+    
+    <div class="media-auto-nofull">
+      <img src="static/images/figure_5.webp"
+           alt="annotation"
+           loading="lazy" decoding="async">
+    </div>
+    
+<div class="yt-carousel-wrap">
+  <h3 class="title is-4 mt-4">Demonstration videos of 5 embodied interaction tasks:</h3>
+  <div id="yt-carousel-anno" class="carousel results-carousel">
+    <!-- Slide 1 -->
+    <div class="item">
+      <div class="video-16by9">
+        <iframe
+          data-src="https://www.youtube-nocookie.com/embed/Fxc9pYVRHKA?enablejsapi=1&rel=0&modestbranding=1&playsinline=1"
+          title="Demo 1"
+          loading="lazy"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share">
+        </iframe>
+      </div>
+    </div>
+
+    <!-- Slide 2 -->
+    <div class="item">
+      <div class="video-16by9">
+        <iframe
+          data-src="https://www.youtube-nocookie.com/embed/2ZJn3PZw0HQ?enablejsapi=1&rel=0&modestbranding=1&playsinline=1"
+          title="Demo 2"
+          loading="lazy"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share">
+        </iframe>
+      </div>
+    </div>
+
+    <!-- Slide 3 -->
+    <div class="item">
+      <div class="video-16by9">
+        <iframe
+          data-src="https://www.youtube-nocookie.com/embed/aa06Y5YF89A?enablejsapi=1&rel=0&modestbranding=1&playsinline=1"
+          title="Demo 3"
+          loading="lazy"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share">
+        </iframe>
+      </div>
+    </div>
+
+    <!-- Slide 4 -->
+    <div class="item">
+      <div class="video-16by9">
+        <iframe
+          data-src="https://www.youtube-nocookie.com/embed/h-nwJCVOKGE?enablejsapi=1&rel=0&modestbranding=1&playsinline=1"
+          title="Demo 4"
+          loading="lazy"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share">
+        </iframe>
+      </div>
+    </div>
+
+    <!-- Slide 5 -->
+    <div class="item">
+      <div class="video-16by9">
+        <iframe
+          data-src="https://www.youtube-nocookie.com/embed/wFFfhob__sA?enablejsapi=1&rel=0&modestbranding=1&playsinline=1"
+          title="Demo 5"
+          loading="lazy"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share">
+        </iframe>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+    <div class="yt-carousel-wrap">
+      <h3 class="title is-4 mt-4">With human request:</h3>
+      <div id="yt-carousel-anno" class="carousel results-carousel">
+        <!-- Slide 1 -->
+        <div class="item">
+          <div class="video-16by9">
+            <iframe
+              data-src="https://www.youtube-nocookie.com/embed/7o7v3QjgIT4?enablejsapi=1&rel=0&modestbranding=1&playsinline=1"
+              title="Demo 1"
+              loading="lazy"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share">
+            </iframe>
+          </div>
+        </div>
+    
+        <!-- Slide 2 -->
+        <div class="item">
+          <div class="video-16by9">
+            <iframe
+              data-src="https://www.youtube-nocookie.com/embed/nBBNNdNOXWQ?enablejsapi=1&rel=0&modestbranding=1&playsinline=1"
+              title="Demo 2"
+              loading="lazy"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share">
+            </iframe>
+          </div>
+        </div>
+    
+        <!-- Slide 3 -->
+        <div class="item">
+          <div class="video-16by9">
+            <iframe
+              data-src="https://www.youtube-nocookie.com/embed/Ae4ffRJymc0?enablejsapi=1&rel=0&modestbranding=1&playsinline=1"
+              title="Demo 3"
+              loading="lazy"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share">
+            </iframe>
+          </div>
+        </div>
+        <!-- Slide 4 -->
+        <div class="item">
+          <div class="video-16by9">
+            <iframe
+              data-src="https://www.youtube-nocookie.com/embed/KiWgsxhy2hE?enablejsapi=1&rel=0&modestbranding=1&playsinline=1"
+              title="Demo 4"
+              loading="lazy"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share">
+            </iframe>
+          </div>
+        </div>
+        <!-- Slide 5 -->
+        <div class="item">
+          <div class="video-16by9">
+            <iframe
+              data-src="https://www.youtube-nocookie.com/embed/EuwPNSm6nJw?enablejsapi=1&rel=0&modestbranding=1&playsinline=1"
+              title="Demo 5"
+              loading="lazy"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share">
+            </iframe>
+          </div>
+        </div>
+  </div>
+</section>
+
+
+
+
+<section class="stripe">
+  <div class="container is-max-fullhd">
+    <header class="stripe-header">
+      <h2 class="title is-2">Real-World Deployment</h2>
+      <p class="subtitle is-4 justify">
+        Our real-world platform is a <strong>Kobuki-based custom build (Kobuki underlies TurtleBot 2)</strong>, equipped with a front-mounted <strong>RealSense D435i</strong> tilted 15° upward and an onboard <strong>Jetson Xavier NX</strong> for base control and remote-server communication. The deployed model ran on a remote server with an NVIDIA A100-SXM4-40GB GPU, handling visual observations and language instructions and transmitted decisions to the robot.
+      </p>
+    </header>
+    <div class="media-auto-nofull-90">
+      <img src="static/images/real.webp"
+           alt="annotation"
+           loading="lazy" decoding="async">
+    </div>
+        
+<div class="yt-carousel-wrap">
+  <h3 class="title is-4 mt-4">Demonstration videos of real-world deployment:</h3>
+  <div id="yt-carousel-anno" class="carousel results-carousel">
+    <!-- Slide 1 -->
+    <div class="item">
+      <div class="video-16by9">
+        <iframe
+          data-src="https://www.youtube-nocookie.com/embed/B8vleLKsxuQ?enablejsapi=1&rel=0&modestbranding=1&playsinline=1"
+          title="Demo 1"
+          loading="lazy"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share">
+        </iframe>
+      </div>
+    </div>
+
+    <!-- Slide 2 -->
+    <div class="item">
+      <div class="video-16by9">
+        <iframe
+          data-src="https://www.youtube-nocookie.com/embed/GhzCdTJDdh0?enablejsapi=1&rel=0&modestbranding=1&playsinline=1"
+          title="Demo 2"
+          loading="lazy"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share">
+        </iframe>
+      </div>
+    </div>
+
+    <!-- Slide 3 -->
+    <div class="item">
+      <div class="video-16by9">
+        <iframe
+          data-src="https://www.youtube-nocookie.com/embed/rPOn3ndmNf0?enablejsapi=1&rel=0&modestbranding=1&playsinline=1"
+          title="Demo 3"
+          loading="lazy"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share">
+        </iframe>
+      </div>
+    </div>
+        <!-- Slide 4 -->
+        <div class="item">
+          <div class="video-16by9">
+            <iframe
+              data-src="https://www.youtube-nocookie.com/embed/AVu4Kc0f0Q4?enablejsapi=1&rel=0&modestbranding=1&playsinline=1"
+              title="Demo 4"
+              loading="lazy"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share">
+            </iframe>
+          </div>
+        </div>
+            <!-- Slide 5 -->
+    <div class="item">
+      <div class="video-16by9">
+        <iframe
+          data-src="https://www.youtube-nocookie.com/embed/S4qVGB1zTPE?enablejsapi=1&rel=0&modestbranding=1&playsinline=1"
+          title="Demo 5"
+          loading="lazy"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share">
+        </iframe>
+      </div>
+    </div>
+  </div>
+</div>
+
+  </div>
+</section>
+
+
+<section class="stripe is-alt">
+  <div class="container is-max-fullhd">
+    <header class="stripe-header">
+      <h2 class="title is-2">Cost-benefit Analysis</h2>
+      <p class="subtitle is-4">
+        We conducted a <strong>cost-benefit analysis</strong> to evaluate the data acquisition expenses for real-world vs. simulated data. This differential growth pattern led to <strong>a critical intersection point</strong>. Around 889 episodes, the cost curves for real-world and simulated data intersected at approximately $8,100. Beyond this threshold, simulated data collection became substantially more cost-effective. This analysis clearly demonstrates that while realworld data is initially less expensive for smaller dataset sizes, <strong>simulation data offers a far more scalable and cost-efficient paradigm for large-scale embodied AI dataset generation of sweeping robots.</strong>
+      </p>
+    </header>
+    
+    <div class="media-auto-nofull">
+      <img src="static/images/figure_10.webp"
+           alt="annotation"
+           loading="lazy" decoding="async">
+    </div>
+  </div>
+</section>
+
+
+<section class="stripe">
+  <div class="container is-max-fullhd">
+    <header class="stripe-header">
+      <h2 class="title is-2">Experimental Results</h2>
+    </header>
+
+<div class="media-carousel-wrap">
+  <div id="img-carousel-demo" class="carousel results-carousel">
+    <!-- Slide 1 -->
+    <div class="item">
+      <figure class="media-slide">
+        <img
+          src="static/images/table_1.webp"
+          alt="Scene 1"
+          loading="lazy" decoding="async">
+      </figure>
+    </div>
+
+    <!-- Slide 2 -->
+    <div class="item">
+      <figure class="media-slide">
+        <img
+          src="static/images/table_2.webp"
+          alt="Scene 2"
+          loading="lazy" decoding="async">
+      </figure>
+    </div>
+
+    <!-- Slide 3 -->
+    <div class="item">
+      <figure class="media-slide">
+        <img
+          src="static/images/table_3.webp"
+          alt="Scene 3"
+          loading="lazy" decoding="async">
+      </figure>
+    </div>
+
+    <!-- Slide 4 -->
+    <div class="item">
+      <figure class="media-slide">
+        <img
+          src="static/images/table_4.webp"
+          alt="Scene 3"
+          loading="lazy" decoding="async">
+      </figure>
+    </div>
+
+    <!-- Slide 5 -->
+    <div class="item">
+      <figure class="media-slide">
+        <img
+          src="static/images/table_5.webp"
+          alt="Scene 3"
+          loading="lazy" decoding="async">
+      </figure>
+    </div>
+
+    <!-- Slide 6 -->
+    <div class="item">
+      <figure class="media-slide">
+        <img
+          src="static/images/table_8.webp"
+          alt="Scene 3"
+          loading="lazy" decoding="async">
+      </figure>
+    </div>
+
+    <!-- Slide 7 -->
+    <div class="item">
+      <figure class="media-slide">
+        <img
+          src="static/images/figure_7.webp"
+          alt="Scene 3"
+          loading="lazy" decoding="async">
+      </figure>
+    </div>
+
+    <!-- Slide 8 -->
+    <div class="item">
+      <figure class="media-slide">
+        <img
+          src="static/images/figure_11.webp"
+          alt="Scene 3"
+          loading="lazy" decoding="async">
+      </figure>
+    </div>
+
+    <!-- Slide 9 -->
+    <div class="item">
+      <figure class="media-slide">
+        <img
+          src="static/images/figure_12.webp"
+          alt="Scene 3"
+          loading="lazy" decoding="async">
+      </figure>
+    </div>
+  </div>
+</div>
+
+  </div>
+</section>
+
+
+
+  <footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+
+          <p>
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+            You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Statcounter tracking code -->
+  
+<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+    <!-- End of Statcounter Code -->
+
+  </body>
+  </html>
